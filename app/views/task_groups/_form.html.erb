@@ -1,0 +1,16 @@
+<h4> Showing task group form </h4>
+
+<% semantic_form_for ([@project,@task_group]) do |group_form| %>
+
+<% group_form.inputs :task_group => "Basic" do %>
+<%= group_form.input :group_title , :input_html => { :class => 'autogrow'} %>
+<%= group_form.input :group_description , :input_html => { :class => 'autogrow', :rows => 5} %>
+
+<% group_form.buttons do %>
+<%= group_form.commit_button %>
+<% end %>
+
+<% end %>
+
+<% end %>
+

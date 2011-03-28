@@ -3,5 +3,16 @@
 <label> Title : </label>  <%= @project.project_title %> <br/ >
 <label> Project Description : </label> <%= @project.project_description %> <br/ >
 
+<div class="task_group_class">
+  <h4> All Task Groups </h4>
+  <% @project.task_groups.each do |tg|%>
+  <label> Task Group Title : </label>  <%= link_to tg.group_title , project_task_group_path(@project,tg)%> <br/ >
+  <label> Task Group Description : </label> <%= tg.group_description %> <br/ >
+  <%= link_to "Remove Task Group", project_task_group_path(@project,tg), :method => :delete, :confirm => "Delete, are u Sure ??" %> <br/ >
+  <% end %>
+
+  <%= link_to "Add a Task Group", new_project_task_group_path(@project) %>
+</div>
+
 
 <%= link_to "Back to Index", projects_path %>
