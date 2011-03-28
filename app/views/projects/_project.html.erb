@@ -1,0 +1,6 @@
+<ul>
+  <li>
+    <%= link_to project.project_title , project_path(project) %>
+    <%= link_to "Remove" , project_path(project), :method => :delete, :confirm => "Delete, are u Sure ??" %>
+  </li>
+</ul>
