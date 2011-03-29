@@ -1,5 +1,7 @@
 ProjectManagementSystem::Application.routes.draw do
 
+  devise_for :people
+
   resources :projects do
     resources :task_groups
   end
