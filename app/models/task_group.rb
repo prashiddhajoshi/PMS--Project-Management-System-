@@ -1,7 +1,9 @@
 class TaskGroup < ActiveRecord::Base
 
-  belongs_to :project
+  validates :group_title , :presence =>true
+  validates :group_description , :presence =>true
 
+  belongs_to :project
   has_many :tasks
 
 end

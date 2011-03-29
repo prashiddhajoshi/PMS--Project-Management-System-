@@ -1,8 +1,10 @@
 class TaskGroupsController < ApplicationController
 
+  before_filter :authenticate_person!
+
   def new
-     @project = Project.find(params[:project_id])
-     @task_group = @project.task_groups.new
+    @project = Project.find(params[:project_id])
+    @task_group = @project.task_groups.new
   end
 
   def create
@@ -10,7 +12,10 @@ class TaskGroupsController < ApplicationController
     @task_group = @project.task_groups.create(params[:task_group])
     if @task_group.save
       redirect_to project_path(@project), :notice => "New Task Group Added Successfully !!"
+    else
+      render "new"
     end
+
   end
 
   def show

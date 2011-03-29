@@ -17,7 +17,9 @@ before_filter :authenticate_person!
   def create
     @project = Project.new(params[:project])
     if @project.save
-      redirect_to @project, :notice => "New Project Created Successfully !!"
+      redirect_to projects_path, :notice => "New Project Created Successfully !!"
+    else
+      render "new"
     end
   end
 

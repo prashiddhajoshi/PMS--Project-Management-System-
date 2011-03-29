@@ -1,0 +1,6 @@
+<% if person_signed_in? %>
+<p> Welcome <%= current_person.email %> |
+  <%= link_to "sign out" , destroy_person_session_path %> </p>
+  <% else %>
+  <p> <% link_to "sign in", new_person_session_path %> </p>
+  <% end %>
