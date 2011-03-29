@@ -1,5 +1,11 @@
-<h1> Showing Task Group </h1>
+<h3> Showing Tasks of Group <%= @task_group.group_title %>  </h3>
 
+<div class="task_class">
+  <h4>All The Tasks</h4>
+  <% @task_group.tasks.each do |t|%>
+  <label> Task Title : </label>  <%= t.title %> <br/ >
+  <label> Task Description : </label> <%= t.description %> <br/ >
+  <%= link_to "Remove Task", task_group_task_path(@task_group,t), :method => :delete, :confirm => "Delete, are u Sure ??" %> <br/ >
+  <% end %>
 
-<label> Title : </label><%= @task_group.group_title %> <br/ >
-<label> Task Group Description : </label> <%= @task_group.group_description %>
+<%= link_to "Add a Task", new_task_group_task_path(@task_group) %>

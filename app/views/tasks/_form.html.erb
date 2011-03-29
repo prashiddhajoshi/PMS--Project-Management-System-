@@ -1,0 +1,11 @@
+<h4> Showing task form </h4>
+
+<% semantic_form_for ([@task_group,@task]) do |task_form| %>
+<% task_form.inputs :task => "Basic" do %>
+<%= task_form.input :title , :input_html => { :class => 'autogrow'} %>
+<%= task_form.input :description , :input_html => { :class => 'autogrow', :rows => 5} %>
+<% task_form.buttons do %>
+<%= task_form.commit_button %>
+<% end %>
+<% end %>
+<% end %>
