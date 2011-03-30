@@ -1,10 +1,10 @@
-<% semantic_form_for @project do |form| %>
+<%= semantic_form_for @project do |form| %>
 
-<% form.inputs :project => "Basic" do %>
+<%= form.inputs :project => "Basic" do %>
 <%= form.input :project_title , :input_html => { :class => 'autogrow'} %>
 <%= form.input :project_description , :input_html => { :class => 'autogrow', :rows => 5}%>
 
-<% form.buttons do %>
+<%= form.buttons do %>
 <%= form.commit_button %>
 <% end %>
 

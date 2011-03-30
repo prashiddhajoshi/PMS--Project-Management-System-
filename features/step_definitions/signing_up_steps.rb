@@ -12,3 +12,7 @@ end
 Then /^I should see the following signing_ups:$/ do |expected_signing_ups_table|
   expected_signing_ups_table.diff!(tableish('table tr', 'td,th'))
 end
+
+# Given /^a person exists with "([^"]*)" with password "([^"]*)"$/ do |email, pass|
+#   Person.create!(:email => email, :password => )
+# end

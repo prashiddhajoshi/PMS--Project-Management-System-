@@ -13,11 +13,9 @@ Feature: Manage New User Signup
 
   @javascript
   Scenario: Loggin in a user
-     # Given a person exists with "prasidjoshi@gmail.com"
-
+    Given a person exists with "prasidjoshi@gmail.com" and password "secret"
     Given I am on the login page
     And I fill in "Email" with "prasidjoshi@gmail.com"
     And I fill in "Password" with "secret"
     And I press "Sign in"
-    And I sleep for 10 seconds
     Then I should see "Signed in successfully"
