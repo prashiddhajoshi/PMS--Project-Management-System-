@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
+gem 'sqlite3'
 
 gem 'annotate'
 gem 'irbtools'
@@ -11,12 +12,21 @@ gem 'formtastic','~>1.2.0'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'shoulda-matchers'
+
 end
 
 gem 'devise'
+gem 'validates_timeliness','~>3.0.2'
 
-gem 'sqlite3'
+group :test do
+  gem 'machinist', '>=2.0.0.beta1'
+  gem 'ffaker'
+  gem 'cucumber-rails'
+  gem 'shoulda-matchers'
+  gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+  gem 'launchy'
+  gem 'database_cleaner'
+end
 
 # Use unicorn as the web server
 # gem 'unicorn'

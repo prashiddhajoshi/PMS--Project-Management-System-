@@ -1,6 +1,6 @@
 class DeviseCreatePeople < ActiveRecord::Migration
   def self.up
-    create_table(:people) do |t|
+    change_table(:people) do |t|
       t.database_authenticatable :null => false
       t.recoverable
       t.rememberable

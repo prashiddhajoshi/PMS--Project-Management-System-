@@ -10,13 +10,11 @@ describe TaskGroup do
 
   context "it should have the same group title" do
     it " -checks group info " do
-      task_group = TaskGroup.create(:group_title => "new group", :group_description => "simple GRP1")
+      task_group = TaskGroup.create!(:group_title => "new group", :group_description => "simple GRP1")
 
       task_group.group_title.should == "new group"
       task_group.group_description.should == "simple GRP1"
     end
   end
-
-
 
 end
