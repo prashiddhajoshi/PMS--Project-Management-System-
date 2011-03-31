@@ -1,3 +1,3 @@
-Then /^(\d+) user should exist$/ do |number|
+Then /^(\d+) project should exist$/ do |number|
  Project.count.should == 1
 end
