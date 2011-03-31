@@ -26,6 +26,8 @@ group :test do
   gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
   gem 'launchy'
   gem 'database_cleaner'
+  # to use features of cucumber pickle
+  gem 'pickle'
 end
 
 # Use unicorn as the web server

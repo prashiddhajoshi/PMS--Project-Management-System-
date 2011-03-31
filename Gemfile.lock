@@ -119,6 +119,9 @@ GEM
     mime-types (1.16)
     nokogiri (1.4.4)
     orm_adapter (0.0.4)
+    pickle (0.4.7)
+      cucumber (>= 0.8)
+      rake
     polyglot (0.3.1)
     rack (1.2.2)
     rack-mount (0.6.13)
@@ -193,6 +196,7 @@ DEPENDENCIES
   irbtools
   launchy
   machinist (>= 2.0.0.beta1)
+  pickle
   rails (= 3.0.5)
   rspec-rails
   shoulda-matchers

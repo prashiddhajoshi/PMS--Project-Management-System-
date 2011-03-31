@@ -10,6 +10,9 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
+    when /the new task_groups page/
+      new_task_groups_path
+
     when /the new project_creation page/
       new_project_path
 

@@ -5,11 +5,12 @@ Feature: Manage New Project Creation
 
   @javascript
   Scenario: Register new Project
-    # Given I am authenticated
+    Given I am authenticated
+    Then sleep for 2 seconds
     Given I am on the new project_creation page
-    Then I sleep for 4 seconds
     And I fill in "project_project_title" with "ABZ"
     And I fill in "project_project_description" with "This is ABZ project"
     And I press "Create"
     Then 1 project should exist
-
+    Then I should see "New Project Created Successfully !!"
+    Then sleep for 2 seconds
