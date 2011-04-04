@@ -17,6 +17,11 @@ before_filter :authenticate_person!
     end
   end
 
+  def show
+    @task_group = TaskGroup.find(params[:task_group_id])
+    @task = @task_group.tasks.find(params[:id])
+   end
+
   def destroy
     @task_group = TaskGroup.find(params[:task_group_id])
     @task = @task_group.tasks.find(params[:id])

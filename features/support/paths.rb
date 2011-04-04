@@ -10,14 +10,18 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-    when /the new task_groups page/
-      new_task_groups_path
+    when /the new task_creation page/
+      new_task_group_task_path(@task_group)
+
+    when /the task_group page/
+      project_task_group_path(@task_group.project,@task_group)
 
     when /the new project_creation page/
       new_project_path
 
     when /the new signing_up page/
       new_person_registration_path
+
     when /login page/
       new_person_session_path
 

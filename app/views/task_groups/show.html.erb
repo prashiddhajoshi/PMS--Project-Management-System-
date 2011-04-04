@@ -3,12 +3,12 @@
 <div class="task_class">
   <h4>All The Tasks</h4>
   <% @task_group.tasks.each do |t|%>
-  <label> Task Title : </label>  <%= t.title %> <br/ >
+  <label> Task Title : </label>  <%= link_to t.title, task_group_task_path(@task_group,t) %> <br/ >
   <label> Task Description : </label> <%= t.description %> <br/ >
   <%= link_to "Remove Task", task_group_task_path(@task_group,t), :method => :delete, :confirm => "Delete, are u Sure ??" %> <br/ >
   <% end %>
 
-<%= link_to "Add a Task", new_task_group_task_path(@task_group) %> <br />
-
+  <%= link_to "Add a Task", new_task_group_task_path(@task_group) %> <br />
+</div>
 
 <%= link_to "Back to Project", project_path(@project) %>

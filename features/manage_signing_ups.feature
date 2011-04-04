@@ -13,7 +13,7 @@ Feature: Manage New User Signup
         Then 1 user should exist
         And I should see "Welcome! You have signed up successfully"
         And I should see "Welcome prashiddhajoshi@gmail.com"
-        Then sleep for 3 seconds
+        Then sleep for 2 seconds
 
   @javascript
       Scenario: Logging in a user
@@ -23,4 +23,5 @@ Feature: Manage New User Signup
         And I fill in "Password" with "secret"
         And I press "Sign in"
         Then I should see "Signed in successfully"
-        Then sleep for 3 seconds
+        Then sleep for 2 seconds
+

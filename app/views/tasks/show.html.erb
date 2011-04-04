@@ -1,0 +1,12 @@
+<h3>Assigned Member of <%= @task.title %>  </h3>
+
+<div class="member_class">
+  <% if @task.person != nil %>
+    <label> Member : </label>  <%= @task.person.name %> <br/ >
+    <%= link_to "Remove Member", task_person_path(@task,@person), :method => :delete, :confirm => "Delete, are u Sure ??" %> <br/ >
+  <% else %>
+    <%= link_to "Assign a Member" , new_task_person_path(@task) %>
+  <% end %>
+</div>
+
+<%= link_to "Back to Task", task_path(@task) %>

@@ -4,6 +4,6 @@ class TaskGroup < ActiveRecord::Base
   validates :group_description , :presence =>true
 
   belongs_to :project
-  has_many :tasks
+  has_many :tasks, :dependent => :destroy
 
 end
